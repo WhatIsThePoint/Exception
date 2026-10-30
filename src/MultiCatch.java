@@ -1,0 +1,16 @@
+class MultiCatch {
+    public static void main(String args[]) {
+        try {
+            int a = args.length;
+            System.out.println("No Of Arguments = " + a);
+            int b = 42 / a;
+
+            int c[] = {1};
+            c[42] = 99;
+        } catch (ArithmeticException exception) {
+            System.out.println("Divide by 0 exception.");
+        } catch (RuntimeException exception) {
+            System.out.println("Array index is out of bounds exception.");
+        }
+    }
+}
